@@ -1,0 +1,92 @@
+@import '../../styles/variables.scss';
+
+.vz-switch-wrapper {
+  display: flex;
+  align-items: center;
+
+  .vz-toggle-switch {
+    height: 1.5rem;
+
+    .form-switch-slider {
+      background-color: $border-gray;
+      border: none;
+
+      &::before {
+        border: none;
+        outline: none;
+        box-shadow: inset -0.0625rem -0.0625rem 0.125rem rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .form-switch-input:focus~.form-switch-slider {
+      background-color: $border-gray;
+      outline: none;
+      box-shadow: inset -0.0625rem -0.0625rem 0.125rem rgba(0, 0, 0, 0.1);
+    }
+
+    .form-switch-input:checked+.form-switch-slider {
+      background-color: $main-purple;
+      border: none;
+      outline: none;
+      box-shadow: inset 0rem -0.3224rem 0.3224rem rgba(0, 0, 0, 0.05);
+
+      &::before {
+        border: none;
+      }
+    }
+
+    &.form-switch-xs {
+      width: 1.688rem !important;
+      height: 0.938rem !important;
+
+      .form-switch-slider {
+        &::before {
+          width: 0.813rem;
+          height: 0.813rem;
+          transform: translateY(-0.075rem) translateX(-0.05rem);
+        }
+      }
+
+      .form-switch-input:checked~.form-switch-slider::before {
+        transform: translateY(-0.075rem) translateX(0.725rem);
+      }
+    }
+
+    &.form-switch-sm {
+      height: 1.25rem !important;
+    }
+
+    &.form-switch-md {
+      height: 1.5rem !important;
+    }
+
+    &.form-switch-lg {
+      height: 1.75rem !important;
+    }
+  }
+}
+
+/* Dark Mode */
+.c-dark-theme {
+  .vz-switch-wrapper {
+    .vz-toggle-switch {
+      .form-switch-slider {
+        background-color: $dark-gray;
+
+        &::before {
+          box-shadow: inset -0.0625rem -0.0625rem 0.125rem rgba(25, 31, 1, 0.5);
+        }
+      }
+
+      .form-switch-input:focus~.form-switch-slider {
+        background-color: $dark-gray;
+        box-shadow: inset -0.0625rem -0.0625rem 0.125rem rgba(25, 31, 1, 0.5);
+      }
+
+      .form-switch-input:checked+.form-switch-slider {
+        background-color: $main-green;
+        box-shadow: inset 0rem -0.3224rem 0.3224rem rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
