@@ -1,12 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import VzLabel from '../components/Label';
+import { VzLabel } from '../components/Label';
 
 export default {
   title: 'Components/Label',
   component: VzLabel,
-  argTypes: {
-  },
 } as ComponentMeta<typeof VzLabel>;
 
 const Template: ComponentStory<typeof VzLabel> = (args) => <VzLabel {...args} />;

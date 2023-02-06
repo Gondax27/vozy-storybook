@@ -6,7 +6,7 @@ interface LabelProps {
   /**
    * ID of the component
    */
-  id: string
+  id?: string
   /**
    * Common css Stylesheets 
    */
@@ -28,7 +28,7 @@ interface LabelProps {
 /**
  * It returns a label element with the id, style, className, and label properties passed in.
  */
-const VzLabel = ({ id, style, className = '', type = 'default', label = '' }: LabelProps) => {
+export const VzLabel = ({ id, style, className = '', type = 'default', label = '' }: LabelProps) => {
   return (
     <CFormLabel
       id={id}
@@ -38,5 +38,3 @@ const VzLabel = ({ id, style, className = '', type = 'default', label = '' }: La
     </CFormLabel>
   )
 }
-
-export default VzLabel
