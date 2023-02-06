@@ -20,8 +20,8 @@ interface SwitchProps {
   rightLabel?: string
   active: boolean
   disabled?: boolean
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-  // onChange: (status: any) => void
+  size?: 'lg' | 'xl' | undefined
+  onChange: (status: boolean) => void
 }
 
 export const VzSwitch = ({
@@ -32,36 +32,33 @@ export const VzSwitch = ({
   active,
   disabled,
   size,
-  // onChange,
-}: SwitchProps) => {
-  return (
-    <div className={`vz-switch-wrapper ${className || ''}`}>
-      {leftLabel && (
-        <VzLabel
-          label={leftLabel}
-          type='default'
-          className={`${labelClassName} ${labelLeftClassName} mr-2`}
-        />
-      )}
-
-      <CFormSwitch
-        id={id}
-        checked={active}
-        disabled={disabled}
-        
-        label=''
-        className={`vz-toggle-switch c-switch-${size}`}
-        // onChange={(ev) => onChange(ev.target.checked)}
+  onChange
+}: SwitchProps) => (
+  <div className={`vz-switch-wrapper ${className || ''}`}>
+    {leftLabel && (
+      <VzLabel
+        label={leftLabel}
+        type='default'
+        className={`${labelClassName || ''} ${labelLeftClassName || ''} mb-0 me-2`}
       />
+    )}
 
-      {rightLabel && (
-        <VzLabel
-          label={rightLabel}
-          type='default'
-          className={`${labelClassName} ${labelRightClassName} ml-2`}
+    <CFormSwitch
+      id={id}
+      checked={active}
+      disabled={disabled}
+      size={size}
+      className='vz-toggle-switch'
+      onChange={ev => onChange(ev.target.checked)}
+    />
 
-        />
-      )}
-    </div>
-  )
-}
+    {rightLabel && (
+      <VzLabel
+        label={rightLabel}
+        type='default'
+        className={`${labelClassName || ''} ${labelRightClassName || ''} mb-0`}
+
+      />
+    )}
+  </div>
+);

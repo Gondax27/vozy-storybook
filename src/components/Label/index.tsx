@@ -28,13 +28,11 @@ interface LabelProps {
 /**
  * It returns a label element with the id, style, className, and label properties passed in.
  */
-export const VzLabel = ({ id, style, className = '', type = 'default', label = '' }: LabelProps) => {
-  return (
-    <CFormLabel
-      id={id}
-      style={style}
-      className={`vz-label vz-label-${type} ${className}`}>
-      {label}
-    </CFormLabel>
-  )
-}
+export const VzLabel = ({ id, style, className = '', type = 'default', label = '' }: LabelProps) => (
+  <CFormLabel
+    id={id}
+    style={style}
+    className={`vz-label vz-label-${type} ${className}`}>
+    {label}
+  </CFormLabel>
+);

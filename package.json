@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@coreui/coreui": "^4.2.6",
     "@coreui/react": "^4.5.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -50,6 +51,9 @@
     "@storybook/react": "^6.5.15",
     "@storybook/testing-library": "0.0.13",
     "babel-loader": "^8.3.0",
-    "sass": "^1.58.0"
+    "css-loader": "^5.2.6",
+    "sass": "^1.58.0",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0"
   }
 }
