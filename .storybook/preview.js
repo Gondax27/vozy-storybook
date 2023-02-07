@@ -1,3 +1,5 @@
+import { themes } from '@storybook/theming';
+
 import '@coreui/coreui/dist/css/coreui.min.css';
 
 export const parameters = {
@@ -7,5 +9,9 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/
     }
+  },
+  darkMode: {
+    darkClass: 'c-dark-theme',
+    stylePreview: true
   }
 };
