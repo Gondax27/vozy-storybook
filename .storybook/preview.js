@@ -1,5 +1,3 @@
-import { themes } from '@storybook/theming';
-
 import '@coreui/coreui/dist/css/coreui.min.css';
 
 export const parameters = {
