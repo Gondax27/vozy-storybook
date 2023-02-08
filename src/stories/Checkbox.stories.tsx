@@ -15,4 +15,3 @@ VozyCheckbox.args = {
   checked: true,
   label: 'Checkbox',
 };
-

@@ -15,4 +15,3 @@ VozyBadge.args = {
   type: 'neutral',
   text: 'Badge'
 };
-

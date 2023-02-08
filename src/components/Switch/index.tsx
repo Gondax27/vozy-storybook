@@ -44,7 +44,7 @@ interface SwitchProps {
   /**
    * Change the size of the switch
    */
-  size?: 'lg' | 'xl' | undefined
+  size: 'lg' | 'xl' | undefined
   /**
    * Handles the function that will change the state of the switch
    */

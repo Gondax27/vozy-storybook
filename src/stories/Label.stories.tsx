@@ -15,4 +15,3 @@ VozyLabel.args = {
   type: 'default',
   label: 'Type something...',
 };
-

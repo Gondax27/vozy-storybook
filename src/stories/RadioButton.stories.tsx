@@ -15,4 +15,3 @@ VozyRadioButton.args = {
   checked: true,
   label: 'RadioButton',
 };
-

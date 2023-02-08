@@ -13,4 +13,3 @@ export const VozySwitch = Template.bind({});
 
 VozySwitch.args = {
 };
-
